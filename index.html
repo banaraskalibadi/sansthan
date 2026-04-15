@@ -37,17 +37,25 @@
 </head>
 <body class="bg-white text-gray-800">
 
-    <nav id="mainNav" class="fixed w-full z-50 bg-transparent px-6 py-6 flex justify-between items-center text-white transition-all duration-300">
+<nav id="mainNav" class="fixed w-full z-50 bg-transparent px-6 py-6 flex justify-between items-center text-white transition-all duration-300">
         <div class="flex items-center gap-4">
             <img src="./BANARAS-KALI-BARI-SANSTHAN.jpg" class="h-16 w-16 rounded-full shadow-lg border-2 border-white/30 transition-all duration-300" id="navLogo" alt="BKS Logo" onerror="this.style.display='none'">
-            <span id="navTitle" class="font-bold text-2xl tracking-wide hidden md:block drop-shadow-md serif-font transition-all duration-300 uppercase">Banaras Kali Bari Sansthan</span>
+            <span id="navTitle" class="font-bold text-2xl tracking-wide hidden xl:block drop-shadow-md serif-font transition-all duration-300 uppercase">Banaras Kali Bari Sansthan</span>
         </div>
-        <div class="hidden lg:flex gap-10 font-bold text-lg drop-shadow-md" id="navLinks">
+        
+        <div class="hidden lg:flex gap-6 xl:gap-8 font-bold text-[15px] xl:text-lg drop-shadow-md uppercase tracking-wider" id="navLinks">
             <a href="#" class="hover:text-orange-300 transition border-b-2 border-transparent hover:border-orange-300 pb-1">Home</a>
-            <a href="#initiatives" class="hover:text-orange-300 transition pb-1">Our Impact</a>
-            <a href="#csr" class="hover:text-orange-300 transition pb-1">CSR Support</a>
+            <a href="#about" class="hover:text-orange-300 transition pb-1">About</a>
+            <a href="#founder" class="hover:text-orange-300 transition pb-1">Founder</a>
+            <a href="#initiatives" class="hover:text-orange-300 transition pb-1">Projects</a>
+            <a href="#csr" class="hover:text-orange-300 transition pb-1">CSR / Donate</a>
+            <a href="#transparency" class="hover:text-orange-300 transition pb-1">Transparency</a>
+            <a href="#contact" class="hover:text-orange-300 transition pb-1">Contact</a>
         </div>
-        <a href="#transparency" class="bg-orange-600 text-white px-8 py-3 rounded-full font-bold shadow-xl hover:bg-orange-700 transition border border-orange-500">Donate Now</a>
+        
+        <button class="lg:hidden text-white text-3xl focus:outline-none drop-shadow-md" id="mobileMenuBtn">
+            ☰
+        </button>
     </nav>
 
     <header class="relative pt-40 pb-48 overflow-hidden bg-gradient-to-br from-orange-500 via-orange-400 to-orange-300">
