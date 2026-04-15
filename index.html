@@ -11,34 +11,13 @@
         html { scroll-behavior: smooth; }
         body { font-family: 'Georgia', serif; }
         
-        /* The Spiritual Zoom Animation */
-        .hero-bg-container {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            overflow: hidden;
-            z-index: 0;
-        }
-        .hero-image {
-            width: 100%;
-            height: 100%;
-            background-image: url('./FB_IMG_1756793220306.jpg');
-            background-size: cover;
-            background-position: top center;
-            animation: spiritualZoom 20s ease-in-out infinite alternate;
-            filter: brightness(0.85) contrast(1.15);
-        }
-        @keyframes spiritualZoom {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.15); }
-        }
-
         /* The Wavy Divider */
         .wave-divider {
             position: absolute;
             bottom: -1px;
             left: 0;
             width: 100%;
-            height: 100px;
+            height: 120px;
             background: #fff7ed; /* Matches the orange-50 section below */
             clip-path: polygon(0 60%, 100% 0, 100% 100%, 0% 100%);
             z-index: 20;
@@ -50,7 +29,7 @@
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-md px-6 py-3 flex justify-between items-center border-b border-orange-100">
         <div class="flex items-center gap-3">
             <img src="./BANARAS-KALI-BARI-SANSTHAN.jpg" class="h-14 w-14 rounded-full shadow-md" alt="BKS Logo" onerror="this.style.display='none'">
-            <span class="font-bold text-orange-800 text-xl tracking-wide hidden md:block">BANARAS KALI BARI SANSTHAN</span>
+            <span class="font-bold text-orange-800 text-xl tracking-wide hidden md:block uppercase">Banaras Kali Bari Sansthan</span>
         </div>
         <div class="hidden lg:flex gap-10 font-bold text-gray-700">
             <a href="#" class="text-orange-600">Home</a>
@@ -61,19 +40,31 @@
         <a href="#transparency" class="bg-orange-600 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-orange-700 transition">Donate Now</a>
     </nav>
 
-    <header class="relative h-screen flex items-center">
-        <div class="hero-bg-container">
-            <div class="hero-image"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-orange-950/90 via-orange-900/60 to-transparent"></div>
-        </div>
+    <header class="relative pt-32 pb-40 overflow-hidden bg-gradient-to-br from-orange-500 via-orange-400 to-orange-300">
         
-        <div class="relative z-10 text-white px-10 max-w-5xl mt-16">
-            <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight drop-shadow-2xl">Preserving Dharma.<br><span class="text-orange-400">Building the Future.</span></h1>
-            <p class="text-2xl md:text-3xl mb-10 opacity-95 font-medium italic">A ₹500+ Crore Mission for Integrated Education, Gaushala & Heritage Restoration.</p>
-            <div class="flex flex-wrap gap-5 font-bold">
-                <a href="#initiatives" class="bg-white text-orange-900 px-10 py-4 rounded-xl text-xl shadow-2xl hover:bg-orange-50 transition">Impact in Motion</a>
-                <a href="#csr" class="bg-green-700 text-white px-10 py-4 rounded-xl text-xl shadow-2xl border border-green-400/50 hover:bg-green-800 transition">CSR Partnership</a>
+        <div class="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-12 mt-10">
+            
+            <div class="w-full lg:w-3/5 text-white">
+                <h1 class="text-6xl md:text-8xl lg:text-[7rem] font-black mb-6 leading-[0.9] drop-shadow-xl">
+                    Preserving<br>Dharma.<br>
+                    <span class="text-orange-900">Building the<br>Future.</span>
+                </h1>
+                <p class="text-2xl md:text-3xl lg:text-4xl mb-10 opacity-95 font-medium italic drop-shadow-md leading-snug">
+                    A ₹500+ Crore Mission for Integrated Education, Gaushala & Heritage Restoration.
+                </p>
+                <div class="flex flex-wrap gap-5 font-bold">
+                    <a href="#initiatives" class="bg-white text-orange-900 px-10 py-4 rounded-xl text-xl shadow-2xl hover:bg-orange-50 transition">Impact in Motion</a>
+                    <a href="#csr" class="bg-green-800 text-white px-10 py-4 rounded-xl text-xl shadow-2xl hover:bg-green-900 transition border border-green-700">CSR Partnership</a>
+                </div>
             </div>
+
+            <div class="w-full lg:w-2/5 flex justify-center lg:justify-end">
+                <img src="./FB_IMG_1756793220306.jpg" alt="Maa Kali" 
+                     class="w-full max-w-md lg:max-w-full h-auto object-cover shadow-2xl border-4 border-white/40"
+                     style="border-radius: 40px 120px 40px 120px; max-height: 650px;"
+                     onerror="this.style.display='none'">
+            </div>
+
         </div>
         
         <div class="wave-divider"></div>
