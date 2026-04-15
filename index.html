@@ -3,155 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banaras Kali Bari Sansthan | Preserving Dharma</title>
+    <title>Banaras Kali Bari Sansthan</title>
     <link rel="icon" type="image/jpg" href="./BANARAS-KALI-BARI-SANSTHAN.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
         html { scroll-behavior: smooth; }
-        body { font-family: 'Georgia', serif; }
+        body { font-family: 'Lato', sans-serif; }
         
-        /* The Wavy Divider */
-        .wave-divider {
+        /* Majestic Serif Font for Headings */
+        h1, h2, h3, .serif-font { font-family: 'Playfair Display', serif; }
+        
+        /* The Saffron Aura Background */
+        .hero-aura {
+            background: radial-gradient(circle at top right, #fb923c, #ea580c 60%, #c2410c 100%);
+        }
+
+        /* THE FIX: This is the magic that blends the square Maa Kali image 
+           softly into the background, just like the mockup! 
+        */
+        .spiritual-blend {
+            -webkit-mask-image: radial-gradient(circle at center, black 35%, rgba(0,0,0,0.8) 55%, transparent 75%);
+            mask-image: radial-gradient(circle at center, black 35%, rgba(0,0,0,0.8) 55%, transparent 75%);
+            transform: scale(1.15); /* Slightly enlarges her to fill the aura */
+        }
+
+        /* The Smooth, Organic Bottom Wave */
+        .wave-bottom {
             position: absolute;
             bottom: -1px;
             left: 0;
             width: 100%;
-            height: 120px;
-            background: #fff7ed; /* Matches the orange-50 section below */
-            clip-path: polygon(0 60%, 100% 0, 100% 100%, 0% 100%);
-            z-index: 20;
+            overflow: hidden;
+            line-height: 0;
         }
+        .wave-bottom svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 120px;
+        }
+        .wave-bottom .shape-fill { fill: #fff7ed; /* Matches the orange-50 bg below */ }
     </style>
 </head>
 <body class="bg-white text-gray-800">
 
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-md px-6 py-3 flex justify-between items-center border-b border-orange-100">
-        <div class="flex items-center gap-3">
-            <img src="./BANARAS-KALI-BARI-SANSTHAN.jpg" class="h-14 w-14 rounded-full shadow-md" alt="BKS Logo" onerror="this.style.display='none'">
-            <span class="font-bold text-orange-800 text-xl tracking-wide hidden md:block uppercase">Banaras Kali Bari Sansthan</span>
+    <nav class="absolute w-full z-50 bg-transparent px-6 py-6 flex justify-between items-center text-white">
+        <div class="flex items-center gap-4">
+            <img src="./BANARAS-KALI-BARI-SANSTHAN.jpg" class="h-16 w-16 rounded-full shadow-lg border-2 border-white/30" alt="BKS Logo" onerror="this.style.display='none'">
+            <span class="font-bold text-2xl tracking-wide hidden md:block drop-shadow-md serif-font">BANARAS KALI BARI SANSTHAN</span>
         </div>
-        <div class="hidden lg:flex gap-10 font-bold text-gray-700">
-            <a href="#" class="text-orange-600">Home</a>
-            <a href="#initiatives" class="hover:text-orange-600 transition">Our Impact</a>
-            <a href="#csr" class="hover:text-orange-600 transition">CSR Support</a>
-            <a href="#transparency" class="hover:text-orange-600 transition">Transparency</a>
+        <div class="hidden lg:flex gap-10 font-bold text-lg drop-shadow-md">
+            <a href="#" class="hover:text-orange-200 transition border-b-2 border-transparent hover:border-white pb-1">Home</a>
+            <a href="#initiatives" class="hover:text-orange-200 transition pb-1">Our Initiatives</a>
+            <a href="#csr" class="hover:text-orange-200 transition pb-1">CSR Support</a>
         </div>
-        <a href="#transparency" class="bg-orange-600 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-orange-700 transition">Donate Now</a>
+        <a href="#transparency" class="bg-white text-orange-600 px-8 py-3 rounded-full font-bold shadow-xl hover:bg-orange-50 transition">Donate Now</a>
     </nav>
 
-    <header class="relative pt-32 pb-40 overflow-hidden bg-gradient-to-br from-orange-500 via-orange-400 to-orange-300">
+    <header class="relative pt-40 pb-48 overflow-hidden hero-aura">
         
-        <div class="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-12 mt-10">
+        <div class="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-8 mt-12">
             
-            <div class="w-full lg:w-3/5 text-white">
-                <h1 class="text-6xl md:text-8xl lg:text-[7rem] font-black mb-6 leading-[0.9] drop-shadow-xl">
+            <div class="w-full lg:w-1/2 text-white z-20">
+                <h1 class="text-6xl md:text-7xl lg:text-[6.5rem] font-black mb-6 leading-[1.05] drop-shadow-2xl serif-font">
                     Preserving<br>Dharma.<br>
-                    <span class="text-orange-900">Building the<br>Future.</span>
+                    <span class="text-orange-200 opacity-90">Building the<br>Future.</span>
                 </h1>
-                <p class="text-2xl md:text-3xl lg:text-4xl mb-10 opacity-95 font-medium italic drop-shadow-md leading-snug">
+                <p class="text-xl md:text-2xl lg:text-3xl mb-12 opacity-95 font-medium italic drop-shadow-md leading-relaxed border-l-4 border-orange-300 pl-6">
                     A ₹500+ Crore Mission for Integrated Education, Gaushala & Heritage Restoration.
                 </p>
-                <div class="flex flex-wrap gap-5 font-bold">
-                    <a href="#initiatives" class="bg-white text-orange-900 px-10 py-4 rounded-xl text-xl shadow-2xl hover:bg-orange-50 transition">Impact in Motion</a>
-                    <a href="#csr" class="bg-green-800 text-white px-10 py-4 rounded-xl text-xl shadow-2xl hover:bg-green-900 transition border border-green-700">CSR Partnership</a>
+                <div class="flex flex-wrap gap-6 font-bold">
+                    <a href="#initiatives" class="bg-white text-orange-700 px-10 py-4 rounded-full text-lg shadow-2xl hover:bg-orange-50 transition">Support This Mission</a>
+                    <a href="#csr" class="bg-gray-900/40 backdrop-blur-sm text-white px-10 py-4 rounded-full text-lg shadow-2xl border border-white/30 hover:bg-gray-900/60 transition">CSR Partnership</a>
                 </div>
             </div>
 
-            <div class="w-full lg:w-2/5 flex justify-center lg:justify-end">
+            <div class="w-full lg:w-1/2 flex justify-center lg:justify-end absolute lg:relative right-0 opacity-40 lg:opacity-100 z-10">
                 <img src="./FB_IMG_1756793220306.jpg" alt="Maa Kali" 
-                     class="w-full max-w-md lg:max-w-full h-auto object-cover shadow-2xl border-4 border-white/40"
-                     style="border-radius: 40px 120px 40px 120px; max-height: 650px;"
+                     class="w-full max-w-[600px] h-auto object-cover spiritual-blend drop-shadow-2xl"
                      onerror="this.style.display='none'">
             </div>
 
         </div>
         
-        <div class="wave-divider"></div>
+        <div class="wave-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.52,194.27,105.15Z" class="shape-fill"></path>
+            </svg>
+        </div>
     </header>
 
     <section id="initiatives" class="py-24 bg-orange-50 relative z-10">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-black text-orange-950 mb-4 tracking-tight">OUR INITIATIVES</h2>
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-black text-gray-900 mb-4 serif-font">Our Initiatives</h2>
                 <div class="h-1.5 w-32 bg-orange-500 mx-auto rounded-full"></div>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="bg-white p-10 rounded-3xl shadow-xl border-t-8 border-orange-600 hover:-translate-y-2 transition duration-300">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="bg-white p-10 rounded-3xl shadow-xl hover:-translate-y-2 transition duration-300">
                     <div class="text-5xl mb-6">🕉️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-orange-900">Shankaracharya Gurukul</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">Free residential education for 1,000 underprivileged boys. Integrating traditional Vedic wisdom with modern Sanskrit, Hindi, and English proficiency.</p>
+                    <h3 class="text-3xl font-bold mb-4 text-gray-900 serif-font">Gurukul</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed text-lg">Free residential education for 1,000 underprivileged boys. Integrating traditional Vedic wisdom with modern Sanskrit, Hindi, and English proficiency.</p>
+                    <a href="#" class="bg-orange-600 text-white px-8 py-3 rounded-full font-bold shadow-md hover:bg-orange-700 transition">Learn More</a>
                 </div>
-                <div class="bg-white p-10 rounded-3xl shadow-xl border-t-8 border-orange-600 hover:-translate-y-2 transition duration-300">
+                <div class="bg-white p-10 rounded-3xl shadow-xl hover:-translate-y-2 transition duration-300">
                     <div class="text-5xl mb-6">🐄</div>
-                    <h3 class="text-2xl font-bold mb-4 text-orange-900">Maa Annapurna Gaushala</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">Safe shelter for indigenous breeds ensuring zero exploitation. Promoting sustainability through bio-products like biogas and organic fertilizers.</p>
+                    <h3 class="text-3xl font-bold mb-4 text-gray-900 serif-font">Gaushala</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed text-lg">Safe shelter for indigenous breeds ensuring zero exploitation. Promoting sustainability through bio-products like biogas and organic fertilizers.</p>
+                    <a href="#" class="bg-orange-600 text-white px-8 py-3 rounded-full font-bold shadow-md hover:bg-orange-700 transition">Learn More</a>
                 </div>
-                <div class="bg-white p-10 rounded-3xl shadow-xl border-t-8 border-orange-600 hover:-translate-y-2 transition duration-300">
+                <div class="bg-white p-10 rounded-3xl shadow-xl hover:-translate-y-2 transition duration-300">
                     <div class="text-5xl mb-6">🛕</div>
-                    <h3 class="text-2xl font-bold mb-4 text-orange-900">Heritage Restoration</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">Preserving the spiritual landscape of Kashi through dedicated restoration of ancient temples and conservation of cultural landmarks.</p>
+                    <h3 class="text-3xl font-bold mb-4 text-gray-900 serif-font">Temple Renovation</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed text-lg">Preserving the spiritual landscape of Kashi through dedicated restoration of ancient temples and conservation of cultural landmarks.</p>
+                    <a href="#" class="bg-orange-600 text-white px-8 py-3 rounded-full font-bold shadow-md hover:bg-orange-700 transition">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="csr" class="py-24 bg-white">
+    <section id="csr" class="py-24 bg-white relative">
         <div class="container mx-auto px-6">
-            <div class="bg-gray-900 text-white rounded-[3rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
-                <div class="lg:w-1/2 p-12 md:p-16">
-                    <h2 class="text-4xl font-bold mb-10 text-orange-500">Partner for Measurable Impact</h2>
-                    <div class="space-y-6 text-lg">
-                        <div class="flex justify-between border-b border-gray-700 pb-3">
-                            <span class="text-gray-300 uppercase tracking-wider">Construction</span>
+            <div class="bg-[#1b3d2b] text-white rounded-[3rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl relative">
+                <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at top left, #fb923c, transparent 60%);"></div>
+                
+                <div class="lg:w-1/2 p-12 md:p-16 relative z-10">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-10 text-orange-400 serif-font">CSR Partnership</h2>
+                    <p class="text-xl mb-10 leading-relaxed font-light">To partner with us under CSR initiatives focusing on sustainable development in Education, Gaushala care, and Heritage Preservation.</p>
+                    <div class="bg-white/10 p-8 rounded-3xl mb-8 border border-white/10 backdrop-blur-md">
+                        <p class="font-bold text-2xl mb-2">DARPAN ID: UP/2025/0748761</p>
+                        <p class="opacity-80 text-lg">Section-8 Non-Profit Organization</p>
+                    </div>
+                    <a href="mailto:banaraskalibari@gmail.com" class="inline-block bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-xl shadow-xl hover:bg-orange-700 transition">Explore CSR Partner</a>
+                </div>
+                <div class="lg:w-1/2 bg-gray-900 p-12 md:p-16 flex flex-col justify-center relative z-10">
+                     <div class="space-y-6 text-xl">
+                        <h3 class="text-2xl font-bold text-gray-400 mb-6 uppercase tracking-widest">Project Budget</h3>
+                        <div class="flex justify-between border-b border-gray-700 pb-4">
+                            <span class="text-gray-300">Construction Phase</span>
                             <span class="font-bold text-white">₹250 Cr</span>
                         </div>
-                        <div class="flex justify-between border-b border-gray-700 pb-3">
-                            <span class="text-gray-300 uppercase tracking-wider">Land Acquisition</span>
+                        <div class="flex justify-between border-b border-gray-700 pb-4">
+                            <span class="text-gray-300">Land Acquisition</span>
                             <span class="font-bold text-white">₹100 Cr</span>
                         </div>
-                        <div class="flex justify-between border-b border-gray-700 pb-3">
-                            <span class="text-gray-300 uppercase tracking-wider">Hostel & Infra</span>
+                        <div class="flex justify-between border-b border-gray-700 pb-4">
+                            <span class="text-gray-300">Hostel & Infra</span>
                             <span class="font-bold text-white">₹90 Cr</span>
                         </div>
-                        <div class="flex justify-between font-black text-2xl text-orange-400 pt-6">
-                            <span>TOTAL MISSION</span>
+                        <div class="flex justify-between font-black text-3xl text-orange-400 pt-6">
+                            <span>Total Mission</span>
                             <span>₹500 Cr+</span>
                         </div>
                     </div>
                 </div>
-                <div class="lg:w-1/2 bg-orange-700 p-12 md:p-16 flex flex-col justify-center text-center">
-                    <p class="text-2xl mb-8 font-medium">Seeking CSR Partnerships under the Companies Act, 2013.</p>
-                    <div class="bg-white/10 p-6 rounded-2xl mb-8 border border-white/20">
-                        <p class="font-bold text-xl mb-2">DARPAN ID: UP/2025/0748761</p>
-                        <p class="opacity-90">Section-8 Non-Profit Organization</p>
-                    </div>
-                    <a href="mailto:banaraskalibari@gmail.com" class="bg-gray-900 text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl hover:bg-black transition">INQUIRE FOR CSR</a>
-                </div>
             </div>
         </div>
     </section>
 
-    <footer id="transparency" class="bg-orange-950 text-orange-50 pt-20 pb-12">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-4xl font-black mb-8 text-white">Transparency • Accountability</h2>
-                <div class="bg-white/5 p-10 rounded-3xl space-y-5 text-xl border border-white/10 shadow-inner">
-                    <p class="flex justify-between border-b border-white/10 pb-3"><span class="opacity-70">Account Name:</span> <strong class="text-white">Banaras Kali Bari Sansthan</strong></p>
-                    <p class="flex justify-between border-b border-white/10 pb-3"><span class="opacity-70">Bank:</span> <strong class="text-white">YES BANK (Bhelupur)</strong></p>
-                    <p class="flex justify-between border-b border-white/10 pb-3"><span class="opacity-70">A/C No:</span> <strong class="text-white text-2xl tracking-widest">129088700000064</strong></p>
-                    <p class="flex justify-between pb-1"><span class="opacity-70">IFSC:</span> <strong class="text-white">YESB0001290</strong></p>
+    <footer id="transparency" class="bg-[#fcf8f2] text-gray-900 pt-20 pb-16 border-t border-orange-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-black mb-16 text-center text-orange-800 serif-font">Transparency • Accountability • Impact</h2>
+            
+            <div class="bg-white p-12 rounded-[3rem] shadow-2xl flex flex-col md:flex-row justify-between items-center gap-12 border border-gray-100">
+                <div class="grid md:grid-cols-2 gap-x-16 gap-y-10 w-full text-lg">
+                    <div>
+                        <p class="text-orange-600 font-bold uppercase tracking-wider text-sm mb-1">Account Name</p>
+                        <p class="font-bold text-2xl text-gray-900">Banaras Kali Bari Sansthan</p>
+                    </div>
+                    <div>
+                        <p class="text-orange-600 font-bold uppercase tracking-wider text-sm mb-1">Bank</p>
+                        <p class="font-bold text-2xl text-gray-900">YES BANK</p>
+                    </div>
+                    <div>
+                        <p class="text-orange-600 font-bold uppercase tracking-wider text-sm mb-1">A/C No.</p>
+                        <p class="font-black text-3xl text-gray-900 font-mono tracking-widest">129088700000064</p>
+                    </div>
+                    <div>
+                        <p class="text-orange-600 font-bold uppercase tracking-wider text-sm mb-1">IFSC Code</p>
+                        <p class="font-bold text-2xl text-gray-900 font-mono">YESB0001290</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-3xl border-2 border-dashed border-gray-300 text-center flex-shrink-0">
+                    <img src="./image_screenshot1775923978.jpg" class="h-48 w-48 object-contain mx-auto mix-blend-multiply" alt="Payment QR Code" onerror="this.style.display='none'">
+                    <p class="text-black font-mono text-sm mt-4 font-bold bg-white px-4 py-2 rounded-lg shadow-sm inline-block">yespay.bizsbiz141397@yesbankltd</p>
                 </div>
             </div>
-            <div class="text-center">
-                <p class="font-bold text-xl mb-6 text-orange-300 uppercase tracking-widest">Scan to Support</p>
-                <div class="bg-white p-6 inline-block rounded-3xl shadow-2xl">
-                    <img src="./image_screenshot1775923978.jpg" class="h-64 w-64 object-contain" alt="Payment QR Code" onerror="this.style.display='none'">
-                    <p class="text-black font-mono text-sm mt-4 font-bold">yespay.bizsbiz141397@yesbankltd</p>
-                </div>
-                <p class="mt-8 opacity-60">Registered: B 13/70 Bangali Tola, Sonarpura, Varanasi - 221001</p>
-            </div>
+            <p class="text-center mt-12 text-gray-500 font-medium tracking-wide">© 2026 Banaras Kali Bari Sansthan. Registered: B 13/70 Bangali Tola, Sonarpura, Varanasi.</p>
         </div>
     </footer>
 
